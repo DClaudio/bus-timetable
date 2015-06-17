@@ -1,0 +1,51 @@
+[
+  {
+    "lineName": "22",
+    "destinationName": "Piccadilly Circus",
+    "timestamp": "2015-06-17T10:35:42.826Z",	
+	"timeToStation": 321,
+    "expectedArrival": "2015-06-17T10:41:04Z"
+  },
+  {
+    "lineName": "485",
+    "destinationName": "Wandsworth",
+    "timestamp": "2015-06-17T10:36:12.731Z",
+    "timeToStation": 587,
+    "expectedArrival": "2015-06-17T10:46:00Z"
+  },
+  {
+    "lineName": "22",
+    "destinationName": "Piccadilly Circus",
+    "timestamp": "2015-06-17T10:36:32.766Z",
+    "timeToStation": 691,
+    "expectedArrival": "2015-06-17T10:48:04Z"
+  },
+  {
+    "lineName": "265",
+    "destinationName": "Putney Bridge",
+    "timestamp": "2015-06-17T10:35:42.826Z",
+    "timeToStation": 887,
+    "expectedArrival": "2015-06-17T10:50:30Z"
+  },
+  {
+    "lineName": "22",
+    "destinationName": "Piccadilly Circus",
+    "timestamp": "2015-06-17T10:35:42.826Z",
+    "timeToStation": 1221,
+    "expectedArrival": "2015-06-17T10:56:04Z"
+  },
+  {
+    "lineName": "265",
+    "destinationName": "Putney Bridge",
+    "timestamp": "2015-06-17T10:35:22.795Z",
+    "timeToStation": 1273,
+    "expectedArrival": "2015-06-17T10:56:36Z"
+  },
+  {
+    "lineName": "22",
+    "destinationName": "Piccadilly Circus",
+    "timestamp": "2015-06-17T10:35:22.795Z",
+    "timeToStation": 1661,
+    "expectedArrival": "2015-06-17T11:03:04Z"
+  }
+]
