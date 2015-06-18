@@ -5,7 +5,16 @@ from TflApiUrlBuilder import *
 
 class TestTflArrivalsResponseParser(unittest.TestCase):
 
+	@unittest.skip("not important")
+	def test_format_seconds(self):
+		seconds = 623 # equivalent to 10min 23sec
+		expected_result = '10:23'
+		responseParser = TflArrivalsResponseParser()		
+		self.assertEqual(responseParser.format_seconds(seconds), expected_result)
+
+
 	def test_parse_response(self):
+		#load test data from resource files
 		eample_response_file = open('resources/example_response.json')
 		response_string = eample_response_file.read()
 		eample_response_file.close()
@@ -13,8 +22,10 @@ class TestTflArrivalsResponseParser(unittest.TestCase):
 		expected_result = json.loads(expected_result_file.read())
 		expected_result_file.close()
 
-		responseParser = TflArrivalsResponseParser()		
-		self.assertEqual(responseParser.get_formated_response(response_string), expected_result)
+		# assert the results
+		responseParser = TflArrivalsResponseParser()
+		actual_result = responseParser.get_formated_response(response_string)
+		self.assertEqual(actual_result, expected_result)
 
 class TestTflApiUrlBuilder(unittest.TestCase):
 

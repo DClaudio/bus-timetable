@@ -2,36 +2,36 @@
   {
     "route": "22",
     "destination": "Piccadilly Circus",
-	"timeToStation": 321
+	  "timeToStation": "5:21"
   },
   {
     "route": "485",
     "destination": "Wandsworth",
-    "timeToStation": 587
+    "timeToStation": "9:47"
   },
   {
     "route": "22",
     "destination": "Piccadilly Circus",
-    "timeToStation": 691
+    "timeToStation": "11:31"
   },
   {
     "route": "265",
     "destination": "Putney Bridge",
-    "timeToStation": 887
+    "timeToStation": "14:47"
   },
   {
     "route": "22",
     "destination": "Piccadilly Circus",
-    "timeToStation": 1221
+    "timeToStation": "20:21"
   },
   {
     "route": "265",
     "destination": "Putney Bridge",
-    "timeToStation": 1273
+    "timeToStation": "21:13"
   },
   {
     "route": "22",
     "destination": "Piccadilly Circus",
-    "timeToStation": 1661
+    "timeToStation": "27:41"
   }
 ]

@@ -7,13 +7,17 @@ class TflArrivalsResponseParser:
 
 	def get_formated_response(self, http_response):
 		response = self.parse_response(http_response)
-		filtered_response = map(self.filter_dictionary,response)
-		sorted_response = sorted(filtered_response, key = lambda k: k['timeToStation'])
-		return sorted_response
+		sorted_response = sorted(response, key = lambda k: k['timeToStation'])
+		formated_resp = list(map(self.filter_dictionary, sorted_response))
+		return formated_resp
 
 	def filter_dictionary(self, entry):
 		return {
 				'route': entry['lineName'],
 				'destination': entry['destinationName'],
-				'timeToStation': entry['timeToStation']
+				'timeToStation': self.format_seconds(entry['timeToStation'])
 				}
+
+	def format_seconds(self, seconds):
+		m, s = divmod(seconds, 60)
+		return '{0}:{1}'.format(m, s)
