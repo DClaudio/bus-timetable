@@ -42,4 +42,4 @@ class TestTflApiUrlBuilder(unittest.TestCase):
 
 
 
-unittest.main()
+unittest.main(verbosity=2)

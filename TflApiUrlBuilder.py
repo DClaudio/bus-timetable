@@ -20,4 +20,3 @@ class TflApiUrlBuilder:
 		return self.base_url + '/' + self.action_category + '/' + self.action \
 				+ '?ids=' + self.station_id + '&app_id=' + self.app_id \
 				+ '&app_key=' + self.app_key
-
