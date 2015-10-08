@@ -28,6 +28,29 @@ class TestTflArrivalsResponseParser(unittest.TestCase):
 		actual_result = self.responseParser.get_formated_response(response_string)
 		self.assertEqual(actual_result, expected_result)
 
+	def test_line_formatter(self):
+		# bus number 
+		expected_result_1 = ' 22 11:54 Piccad'
+		expected_result_2 = '485  4:54 Wandsw'
+
+		#build test data
+		data_to_format1 = {
+				'route': 22,
+				'destination': 'Piccadilly Circus',
+				'timeToStation': '11:54'
+		}
+		data_to_format2 = {
+				'route': 485,
+				'destination': 'Wandsworth',
+				'timeToStation': '4:54'
+		}
+
+		actual_result_1 = self.responseParser.format_line(data_to_format1)
+		actual_result_2 = self.responseParser.format_line(data_to_format2)
+
+		self.assertEqual(actual_result_1,expected_result_1)
+		self.assertEqual(actual_result_2,expected_result_2)
+
 
 
 class TestTflApiUrlBuilder(unittest.TestCase):

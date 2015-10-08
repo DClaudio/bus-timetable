@@ -21,3 +21,8 @@ class TflArrivalsResponseParser:
 	def format_seconds(self, seconds):
 		m, s = divmod(seconds, 60)
 		return '{0}:{1}'.format(m, s)
+
+	# LCD - can fit only 16 characters per line
+	def format_line(self, entry):
+		return '{0:>{widht_0}} {1:>{widht_1}} {2}'.format(entry['route'], entry['timeToStation'], 
+			entry['destination'][:6], widht_0=3, widht_1=5)
