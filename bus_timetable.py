@@ -13,7 +13,7 @@ def requestDataFromTfl(*args):
 		arrivals_data = response.read()
 		formated_data = responseParser.get_formated_response(arrivals_data)
 		#print_arrivals_console(formated_data)
-		return formated_data
+		return map(responseParser.format_line,formated_data)
 	except URLError, e:
 		print 'Request Error: ', e
 		return ['Error: data', 'fetch FAILED']
