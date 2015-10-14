@@ -2,7 +2,7 @@ from urllib2 import Request, urlopen, URLError
 
 from TflArrivalsResponseParser import *
 from TflApiUrlBuilder import *
-from GrooveLCD.py import *
+from GrooveLCD import *
 import time
 
 def requestDataFromTfl(*args):
@@ -27,7 +27,7 @@ def print_arrivals_console(data):
 
 def infiniteRun(*args):
 	mylcd = init_lcd
-	while(true):
+	while(True):
 		data = requestDataFromTfl()
 		print_on_lcd(mylcd, data[0], data[1])
 		sleep(30)
