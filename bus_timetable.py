@@ -26,7 +26,7 @@ def print_arrivals_console(data):
 
 
 def infiniteRun(*args):
-	mylcd = init_lcd
+	mylcd = init_lcd()
 	while(True):
 		data = requestDataFromTfl()
 		print_on_lcd(mylcd, data[0], data[1])
