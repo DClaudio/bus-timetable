@@ -1,0 +1,6 @@
+
+Connect to Edison via USB:
+sudo screen /dev/ttyUSB0 115200
+
+Configure wifi:
+configure_edison --wifi
